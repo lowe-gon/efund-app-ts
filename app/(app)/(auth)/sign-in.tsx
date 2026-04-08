@@ -1,3 +1,4 @@
+import SignInForm from '@/features/signin/components/signin-form';
 import React from 'react';
 import { Text, View } from 'react-native';
 import Animated, {
@@ -36,7 +37,7 @@ export default function SignInScreen() {
         style={animatedContentStyle}
         className="flex-col gap-4 rounded-t-2xl bg-white px-4 pt-4">
         <Text className="font-quicksand-bold text-lg">Login with your account</Text>
-        <View></View>
+        <SignInForm />
       </Animated.View>
     </View>
   );
