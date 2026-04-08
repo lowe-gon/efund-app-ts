@@ -1,8 +1,8 @@
 import useFontScheme from '@/hooks/use-font-scheme';
-import '../global.css';
-
-import { Stack } from 'expo-router';
+import AppProvider from '@/providers';
+import { Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
+import '../global.css';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -11,5 +11,9 @@ export default function RootLayout() {
 
   if (!fontLoaded && !error) return null;
 
-  return <Stack />;
+  return (
+    <AppProvider>
+      <Slot />
+    </AppProvider>
+  );
 }

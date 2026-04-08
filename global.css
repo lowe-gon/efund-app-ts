@@ -1,6 +1,15 @@
 @import 'tailwindcss';
 @import 'uniwind';
 
+@import 'heroui-native/styles';
+/* Path to the heroui-native lib inside node_modules relative to global.css */
+/* Examples:
+ *   - If global.css is at project root: ./node_modules/heroui-native/lib
+ *   - If global.css is in app/: ../node_modules/heroui-native/lib
+ *   - If global.css is in src/styles/: ../../node_modules/heroui-native/lib
+ */
+@source './node_modules/heroui-native/lib';
+
 @theme {
   /* Keep default breakpoints */
   --breakpoint-sm: 440px;
@@ -21,4 +30,16 @@
   --font-quicksand-medium: 'Quicksand-Medium';
   --font-quicksand-semibold: 'Quicksand-SemiBold';
   --font-quicksand-bold: 'Quicksand-Bold';
+}
+
+@layer theme {
+  :root {
+    @variant dark {
+      --color-background: oklch(21% 0% 68deg);
+    }
+
+    @variant light {
+      --color-background: oklch(100% 0% 90deg);
+    }
+  }
 }
