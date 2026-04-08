@@ -38,6 +38,18 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "../assets/fonts/Quicksand-Light",
+            "../assets/fonts/Quicksand-Regular",
+            "../assets/fonts/Quicksand-Medium",
+            "../assets/fonts/Quicksand-SemiBold",
+            "../assets/fonts/Quicksand-Bold"
+          ]
+        }
       ]
     ],
     "experiments": {

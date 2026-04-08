@@ -26,5 +26,13 @@
     "moduleDetection": "force",
     "noEmit": true
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "uniwind.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "uniwind.d.ts",
+    "fonts.d.ts"
+  ],
+  "exclude": ["node_modules"]
 }

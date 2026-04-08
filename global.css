@@ -1,2 +1,24 @@
 @import 'tailwindcss';
 @import 'uniwind';
+
+@theme {
+  /* Keep default breakpoints */
+  --breakpoint-sm: 440px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Add custom breakpoints */
+  --breakpoint-xs: 390px; /* Extra small devices */
+  --breakpoint-mobile-wide: ;
+  --breakpoint-3xl: 1920px; /* Ultra-wide screens */
+  --breakpoint-tablet: 820px; /* iPad-specific */
+
+  /* Fonts */
+  --font-quicksand: 'Quicksand-Regular';
+  --font-quicksand-light: 'Quicksand-Light';
+  --font-quicksand-medium: 'Quicksand-Medium';
+  --font-quicksand-semibold: 'Quicksand-SemiBold';
+  --font-quicksand-bold: 'Quicksand-Bold';
+}
