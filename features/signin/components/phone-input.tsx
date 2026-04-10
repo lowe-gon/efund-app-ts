@@ -1,4 +1,5 @@
 import FloatingLabelInput from '@/components/floating-label-input';
+import { router } from 'expo-router';
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 import Countries from './countries';
@@ -12,7 +13,9 @@ export default function PhoneInput() {
           <FloatingLabelInput label="Phone number" placeholder="123456789" />
         </View>
       </View>
-      <Pressable className="w-full flex-row items-center justify-center rounded-xl bg-green-500 py-4">
+      <Pressable
+        onPress={() => router.push('/(app)/(auth)/verification')}
+        className="w-full flex-row items-center justify-center rounded-xl bg-green-500 py-4">
         <Text className="font-quicksand-medium text-base text-white">Continue</Text>
       </Pressable>
     </View>

@@ -5,7 +5,7 @@ export const unstable_setting = {
 };
 
 export default function AppLayout() {
-  const hasUser = false;
+  const hasUser = true;
 
   return (
     <Stack>
