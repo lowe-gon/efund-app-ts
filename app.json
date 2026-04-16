@@ -52,8 +52,19 @@
           ]
         }
       ],
-      "expo-image",
-      "expo-web-browser"
+      [
+        "expo-image",
+        {
+          "disableLibdav1d": true
+        }
+      ],
+      "expo-web-browser",
+      [
+        "expo-asset",
+        {
+          "assets": ["./assets/images/dog-home.png"]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

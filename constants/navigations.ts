@@ -1,31 +1,47 @@
-import type { Icon } from '@tabler/icons-react-native';
-import { IconFileInvoice, IconPigMoney, IconSmartHome, IconUser } from '@tabler/icons-react-native';
+import type { SFSymbol } from 'expo-symbols';
+
+type TIconProps = {
+  selected: SFSymbol;
+  default: SFSymbol;
+};
 
 export type TNavigations = {
   title: string;
   name: string;
-  icon: Icon;
+  icon: TIconProps;
 };
 
 export const userTabNavigations: TNavigations[] = [
   {
     title: 'Home',
     name: 'index',
-    icon: IconSmartHome,
+    icon: {
+      default: 'house',
+      selected: 'house.fill',
+    },
   },
   {
     title: 'Bills',
     name: 'bills',
-    icon: IconFileInvoice,
+    icon: {
+      default: 'receipt',
+      selected: 'receipt.fill',
+    },
   },
   {
     title: 'Loans',
     name: 'loans',
-    icon: IconPigMoney,
+    icon: {
+      default: 'banknote',
+      selected: 'banknote.fill',
+    },
   },
   {
     title: 'Account',
     name: 'account',
-    icon: IconUser,
+    icon: {
+      default: 'person',
+      selected: 'person.fill',
+    },
   },
 ];
