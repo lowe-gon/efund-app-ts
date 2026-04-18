@@ -1,7 +1,9 @@
 import { cn } from '@/libs/cn';
 import React from 'react';
 import {
+  Text,
   TextInput,
+  View,
   type BlurEvent,
   type FocusEvent,
   type TextInputProps,
@@ -19,10 +21,12 @@ import Animated, {
 interface IFloatingLabelInputProps extends TextInputProps {
   classNames?: ViewProps['className'];
   label: string;
+  isRequired?: boolean;
 }
 
 export default function FloatingLabelInput({
   label,
+  isRequired,
   classNames,
   className,
   placeholder,
@@ -55,10 +59,6 @@ export default function FloatingLabelInput({
     onBlur?.(e);
   };
 
-  const animatedContainerStyle = useAnimatedStyle(() => ({
-    borderColor: interpolateColor(progress.value, [0, 1], ['#d1d5dc', '#6a7282']),
-  }));
-
   const animatedLabelStyle = useAnimatedStyle(() => ({
     transform: [
       {
@@ -71,14 +71,12 @@ export default function FloatingLabelInput({
 
   return (
     <>
-      <Animated.View
-        style={animatedContainerStyle}
-        className={cn('h-14 w-full rounded-xl border px-4', classNames)}>
+      <View className={cn('bg-muted h-14 w-full rounded-xl px-4', classNames)}>
         {/* Label */}
         <Animated.Text
           style={animatedLabelStyle}
-          className="font-quicksand-medium absolute top-4 left-4">
-          {label}
+          className="font-quicksand-medium absolute top-4.5 left-4">
+          {label} {isRequired && <Text className="text-destructive">*</Text>}
         </Animated.Text>
 
         <TextInput
@@ -89,7 +87,7 @@ export default function FloatingLabelInput({
           placeholder={isFocus ? placeholder : ''}
           {...props}
         />
-      </Animated.View>
+      </View>
     </>
   );
 }

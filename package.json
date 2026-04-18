@@ -17,7 +17,7 @@
     "@gluestack-ui/core": "5.0.0-alpha.0",
     "@gluestack-ui/utils": "5.0.1-alpha.0",
     "@gorhom/bottom-sheet": "^5.2.9",
-    "@legendapp/motion": "^2.5.3",
+    "@legendapp/motion": "^2.4.0",
     "@react-navigation/bottom-tabs": "^7.4.0",
     "@react-navigation/elements": "^2.6.3",
     "@react-navigation/native": "^7.1.8",

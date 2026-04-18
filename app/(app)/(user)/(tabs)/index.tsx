@@ -2,6 +2,7 @@ import { Pressable } from '@/components/ui/pressable';
 import { AntDesign, Feather, FontAwesome } from '@expo/vector-icons';
 import { useAssets } from 'expo-asset';
 import { Image } from 'expo-image';
+import { Link } from 'expo-router';
 import React from 'react';
 import { Text, View } from 'react-native';
 
@@ -51,9 +52,11 @@ export default function HomeScreen() {
                 <Text className="font-quicksand-bold text-4xl">
                   <Text className="text-secondary">₱</Text> 15,000
                 </Text>
-                <Pressable className="bg-secondary flex w-full flex-row items-center justify-center rounded-xl py-4">
-                  <Text className="font-quicksand-bold text-base">GET THE FIRST LOAN</Text>
-                </Pressable>
+                <Link href="/(app)/(user)/apply_loans" push asChild>
+                  <Pressable className="bg-secondary flex w-full flex-row items-center justify-center rounded-xl py-4">
+                    <Text className="font-quicksand-bold text-base">GET THE FIRST LOAN</Text>
+                  </Pressable>
+                </Link>
               </View>
             </View>
             <View className="absolute right-2 -bottom-2 left-2 z-40 h-32 rounded-3xl bg-white p-4 shadow-md shadow-gray-300"></View>

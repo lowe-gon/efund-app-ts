@@ -20,14 +20,7 @@ export const userTabNavigations: TNavigations[] = [
       selected: 'house.fill',
     },
   },
-  {
-    title: 'Bills',
-    name: 'bills',
-    icon: {
-      default: 'receipt',
-      selected: 'receipt.fill',
-    },
-  },
+
   {
     title: 'Loans',
     name: 'loans',
