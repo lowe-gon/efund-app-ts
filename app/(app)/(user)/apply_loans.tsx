@@ -14,6 +14,8 @@ export default function ApplyLoansScreen() {
     setActiveStep(activeStep - 1);
   }, [activeStep]);
 
+  console.log(activeStep);
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View className="bg-background flex-1">
@@ -207,7 +209,11 @@ export default function ApplyLoansScreen() {
             </Text>
           )}
           <Pressable
-            onPress={() => setActiveStep((prev) => prev + 1)}
+            onPress={() =>
+              activeStep === 3
+                ? router.replace('/(app)/(user)/disbursement_process')
+                : setActiveStep((prev) => prev + 1)
+            }
             className="bg-secondary flex w-full flex-row items-center justify-center rounded-full py-4">
             <Text className="font-quicksand-bold text-sm text-black">
               {activeStep === 3 ? 'CONFIRM FOR DISBURSAL' : 'CONTINUE'}

@@ -20,6 +20,12 @@ export default function UserLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="disbursement_process"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }
