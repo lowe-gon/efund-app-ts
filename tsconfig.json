@@ -24,7 +24,8 @@
     "verbatimModuleSyntax": true,
     "moduleResolution": "bundler",
     "moduleDetection": "force",
-    "noEmit": true
+    "noEmit": true,
+    "types": ["@hugeicons/core-free-icons", "@hugeicons/react-native"]
   },
   "include": [
     "**/*.ts",
