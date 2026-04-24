@@ -26,6 +26,12 @@ export default function UserLayout() {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="loan_details"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }

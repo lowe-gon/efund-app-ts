@@ -130,7 +130,7 @@ export default function HomeScreen() {
                   <Text className="font-quicksand-bold text-base">₱ 5,000</Text>
                 </View>
 
-                <Link href={'/'} push asChild>
+                <Link href={'/(app)/(user)/loan_details'} push asChild>
                   <Pressable className="flex w-full flex-row items-center justify-center gap-1 rounded-full bg-white py-4">
                     <Text className="text-primary font-quicksand-bold text-base">LOAN DETAILS</Text>
                     <Entypo name="chevron-thin-right" size={16} color={'#032aa7'} />
